@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBT Token Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>IBT Token Bridge</h1>
+
+    <!-- Conectare MetaMask -->
+    <div>
+      <button onclick="connectEthereumWallet()">Connect MetaMask</button>
+    </div>
+
+    <!-- Statusul conexiunii -->
+    <p id="status">Not Connected</p>
+
+    <!-- Afișare balanță ETH -->
+    <div>
+      <button onclick="getBalance()">Check ETH Balance</button>
+      <p id="balance">Balance: 0 ETH</p>
+    </div>
+
+    <!-- Input + butoane pentru tranzacții -->
+    <div>
+      <input type="number" id="amount" placeholder="Amount to Mint/Burn">
+      <button onclick="mintTokens()">Mint Tokens</button>
+      <button onclick="burnTokens()">Burn Tokens</button>
+    </div>
+  </div>
+
+  <!-- Include librăria ethers.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
